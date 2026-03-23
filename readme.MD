@@ -36,22 +36,41 @@ A research and network troubleshooting assistant built with **FastAPI**, **LangG
 ```
 
 ## 🚀 Getting Started
+0. Clone repo: [RAG-serach-chomaDB](https://github.com/tc18/RAG-serach-chomaDB)
+    ```bash
+    cd ..
+    git clone https://github.com/tc18/RAG-serach-chomaDB.git
+    ```
+
 1. Prerequisites
     - Python 3.10+
     - Ollama installed and running.
     - Pull the model: ollama pull llama3.1
 
 2. Installation
-```bash
-# Clone the repo
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
+    ```bash
+    # Clone the repo
+    git clone https://github.com/tc18/LangGraph-Multi-Agent-Orchestrator-.git
+    cd LangGraph-Multi-Agent-Orchestrator-
 
-# Install dependencies
-pip install fastapi uvicorn langgraph langchain_ollama chromadb sentence-transformers pydantic
+    # Install dependencies
+    pip install fastapi uvicorn langgraph langchain_ollama chromadb sentence-transformers pydantic
+    ```
+    in db.py update,
+    ```python
+    client = chromadb.PersistentClient(path="./../project1/chroma_db")
+    ```
+    above line to
+    ```python
+    client = chromadb.PersistentClient(path="./../RAG-serach-chomaDB/chroma_db")
+    ```
+    because that was the project which creates vectorDB.
 
-uvicorn main:app --reload
-```
+    now run the app,
+    ```bash
+    # Run app
+    uvicorn main:app --reload
+    ```
 
 ## 📡 API Endpoints
 1. Stream Agent Updates
