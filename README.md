@@ -50,8 +50,8 @@ A research and network troubleshooting assistant built with **FastAPI**, **LangG
 2. Installation
     ```bash
     # Clone the repo
-    git clone https://github.com/tc18/LangGraph-Multi-Agent-Orchestrator-.git
-    cd LangGraph-Multi-Agent-Orchestrator-
+    git clone https://github.com/tc18/LangGraph-Multi-Agent-Orchestrator.git
+    cd LangGraph-Multi-Agent-Orchestrator
 
     # Install dependencies
     pip install fastapi uvicorn langgraph langchain_ollama chromadb sentence-transformers pydantic
